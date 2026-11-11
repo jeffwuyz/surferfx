@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+*.tar.gz
+qa/
+.env*
+!.env.example
+
+# Local verification screenshots
+deploy/*.jpg
+*.baiduyun.*

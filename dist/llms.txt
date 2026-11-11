@@ -1,0 +1,51 @@
+# SurferFX
+
+> 冲浪者量化（Surfer Quant）官网资料索引。Official Surfer Quant reference pages.
+
+## 中文资料
+
+- [黄金与外汇量化交易研究](https://www.surferfx.com/zh/): 冲浪者AI量化（SurferFX）研究黄金与外汇量化交易。比较黄金甲策略与冲浪者外汇 EA 的交易逻辑、运行条件及历史回撤，了解团队的数据与算力服务。
+- [黄金与外汇量化策略](https://www.surferfx.com/zh/strategies/): 按黄金突破、外汇多货币对组合和黄金期现价差比较五项量化策略，查看黄金甲AI、冲浪者 EA 等策略的交易逻辑、执行频率和风险。
+- [黄金甲策略：XAUUSD 黄金 EA 的突破逻辑](https://www.surferfx.com/zh/strategies/goldarmor/): 黄金甲AI（GoldArmor AI）以 XAUUSD 为交易品种，黄金甲策略先观察多个周期的价格结构。出现突破后，程序结合趋势动量判断是否参与，再根据波动和已有持仓调整退出条件。
+- [冲浪者外汇 EA：多货币对组合策略](https://www.surferfx.com/zh/strategies/surfer/): 冲浪者外汇 EA（Surfer EA）组合交易欧美、镑美、美日和美瑞四个货币对。波段延续时跟踪止盈，行情转为极端单边走势时可触发锁仓；判断风险要看四组持仓合计的美元敞口。
+- [黄金猎人 GoldHunter 历史黄金波段突破策略](https://www.surferfx.com/zh/strategies/goldhunter/): 黄金猎人是更名前的黄金波段突破 EA。它在 XAUUSD 的短周期波动中识别多层级突破，行情加速时可连续下单，再按波动和持仓动态减仓或退出。
+- [股票、期货、黄金与外汇行情研究](https://www.surferfx.com/zh/services/markets/): 通过 VIS Markets 了解股票、期货、黄金、外汇与数字资产行情。比较历史数据时，先确认交易时段、报价单位以及股票复权和期货换月的处理方式。
+- [黄金甲历史实盘记录与回撤](https://www.surferfx.com/zh/performance/): 查看黄金甲标注日期为 2026 年 9 月 6 日的两份账户快照，对照累计收益、最大回撤与原始来源，了解历史数据的统计口径。
+- [研究洞察：黄金甲市场观察与量化研究指南](https://www.surferfx.com/zh/research/): 按日期阅读黄金甲策略市场观察与账户复盘，或查阅黄金与外汇 EA、股票复权、期货换月和量化回测的研究指南。
+- [美国CPI超预期！美联储12月加息概率从0%升至13.6%](https://www.surferfx.com/zh/research/goldarmor-cpi-rate-expectations/): 2026-11-11 黄金甲市场观察。黄金甲团队复盘美国 CPI 公布后黄金价格与美元的变化，区分加息 25 与 50 个基点的预期，并解释如何观察每盎司 4000 美元关口。
+- [CPI来袭，黄金恐下探4000美元，黄金甲策略如何应对？](https://www.surferfx.com/zh/research/goldarmor-gold-before-cpi/): 2026-11-08 黄金甲市场观察。黄金甲策略在美国 CPI 公布前评估黄金波动和交易风险，原文记录 4000 美元关口的两种情形及当周暂停参与数据行情的安排。
+- [黑色星期五，黄金甲大战凶悍行情](https://www.surferfx.com/zh/research/goldarmor-friday-volatility/): 2026-10-31 黄金甲市场观察。结合周五黄金行情中的交易截图，回顾黄金甲策略的持仓、止损和执行，并对照该期账户的月度表现。
+- [黄金甲的风控是怎样确保万无一失的？](https://www.surferfx.com/zh/research/goldarmor-risk-controls/): 2026-10-24 黄金甲市场观察。从仓位调整、动态止损和异常行情处理三个环节，阅读黄金甲AI团队对黄金 EA 风控的当期说明。
+- [黄金甲大战CPI剧烈行情](https://www.surferfx.com/zh/research/goldarmor-cpi-volatility/): 2026-10-18 黄金甲市场观察。回顾黄金甲策略在 CPI 公布时的执行过程，并对照原文记录的黄金交易统计与当期账户图表。
+- [一月零八天，黄金甲翻仓账户观摩](https://www.surferfx.com/zh/research/goldarmor-account-review/): 2026-09-26 黄金甲市场观察。以 8 月 17 日至 9 月 25 日的黄金甲交易记录为起点，结合入金、出金与已实现利润核对账户余额。
+- [黄金甲专攻黄金，把握上蹿下跳进退自有章法](https://www.surferfx.com/zh/research/goldarmor-gold-trading-discipline/): 2026-09-26 黄金甲市场观察。对比 9 月 14 日至 18 日两个黄金甲观察账户的已平仓利润、交易笔数、胜率和盈利因子。
+- [本周增长11703USD，黄金猎人更名黄金甲量化](https://www.surferfx.com/zh/research/goldarmor-brand-change/): 2026-09-05 黄金甲市场观察。黄金猎人更名黄金甲量化的当期记录，说明品牌名称沿革，并逐项回顾当周两次止损、账户增长与回撤。
+- [EA 是什么？黄金与外汇量化交易入门](https://www.surferfx.com/zh/research/what-is-an-ea/): EA 是 Expert Advisor 的缩写。在 MetaTrader 中，这类程序可以按预设规则分析行情，并在获得交易权限后发出交易指令。以黄金与外汇为例，理解信号、成交和账户记录之间的区别。
+- [如何评估量化策略的交易逻辑与失效条件](https://www.surferfx.com/zh/research/read-a-strategy/): 看收益之前，先弄清楚它在什么条件下开仓、退出，以及可能在哪些市场环境中失效。
+- [如何解读实盘记录中的收益、净值与回撤](https://www.surferfx.com/zh/research/records-and-drawdown/): 一条增长曲线只是起点，时间区间、资金变动与净值信息决定了记录能否正确比较。
+- [点差、滑点与网络如何影响策略执行](https://www.surferfx.com/zh/research/execution-environment/): 从点差、滑点到网络连接，执行环境会进入每一笔交易的结果。
+- [量化研究如何选择历史数据与算力](https://www.surferfx.com/zh/research/data-to-research/): 数据覆盖、质量和授权，与算力规格同样影响研究工作的可重复性。
+- [股票量化回测：拆股前后的价格怎样比较？](https://www.surferfx.com/zh/research/stock-price-adjustments/): 股票拆股会同时改变每股报价与持股数量。用一个一拆二的例子，核对原始收盘价、复权因子和策略回测产生的交易信号。
+- [期货量化回测：连续合约换月时怎样计算盈亏？](https://www.surferfx.com/zh/research/futures-contract-roll/): 连续期货图在换月处可能出现跳点。用两个交割月的报价拆开跨月价差、持仓损益和执行成本，检查黄金期货策略回测的计算口径。
+- [关于冲浪者AI量化（SurferFX）与全球团队](https://www.surferfx.com/zh/about/): 了解冲浪者量化的研究方向，以及在新加坡、新西兰、迪拜、马来西亚和中国的机构与团队网络。
+- [SurferFX 品牌与策略常见问题](https://www.surferfx.com/zh/faq/): 了解冲浪者AI量化、冲浪者 EA、黄金猎人及黄金甲的品牌关系，比较黄金与外汇策略，查阅历史账户快照的日期与来源。
+
+## English references
+
+- [Gold and forex quantitative trading research](https://www.surferfx.com/en/): Explore quantitative trading research from SurferFX. Compare GoldArmor’s gold breakout rules with Surfer forex EA, review historical drawdowns and explore research data and compute services.
+- [Gold and forex trading strategies](https://www.surferfx.com/en/strategies/): Compare five gold and forex strategies by trading logic, market, execution requirements and risk, from trend breakouts to futures–spot spreads.
+- [GoldArmor strategy: how the XAUUSD gold EA trades breakouts](https://www.surferfx.com/en/strategies/goldarmor/): GoldArmor EA monitors XAUUSD price structure across timeframes. After a breakout, momentum informs entry and volatility and open positions guide the exit.
+- [Surfer forex EA: a multi-pair trading strategy](https://www.surferfx.com/en/strategies/surfer/): Surfer EA trades four USD currency pairs as a portfolio. It trails profits during sustained moves and can lock positions in extreme trends. The combined USD exposure matters across all four pairs.
+- [GoldHunter historical gold swing breakout strategy](https://www.surferfx.com/en/strategies/goldhunter/): GoldHunter is the historical gold breakout EA. It looks for short-cycle XAUUSD breakouts across multiple levels, can place a series of orders as momentum builds, and adjusts exposure as volatility changes.
+- [Equity, futures, gold and forex market research](https://www.surferfx.com/en/services/markets/): Explore equities, futures, gold, forex and digital assets with VIS Markets. When comparing price histories, check trading hours, quote units, equity price adjustments and futures rolls.
+- [GoldArmor historical trading records and drawdowns](https://www.surferfx.com/en/performance/): Review two GoldArmor account snapshots dated September 6, 2026, with cumulative gains, maximum drawdowns, sources and limits of comparison.
+- [Research insights: GoldArmor market notes and quantitative trading guides](https://www.surferfx.com/en/research/): Browse dated GoldArmor market commentary and account reviews, alongside guides to gold and forex EAs, equity price adjustments and futures rolls.
+- [What is an Expert Advisor (EA) in gold and forex trading?](https://www.surferfx.com/en/research/what-is-an-ea/): An Expert Advisor (EA) is a MetaTrader program that can analyse prices and, with trading permission, send orders. Gold and forex examples show how signals, fills and account records differ.
+- [How to evaluate a trading strategy and when it can fail](https://www.surferfx.com/en/research/read-a-strategy/): Before considering returns, understand when a strategy enters, exits and may fail.
+- [How to read returns, equity and drawdown in a trading record](https://www.surferfx.com/en/research/records-and-drawdown/): A growth curve is a starting point. Time periods, cash flows and equity data determine meaningful comparisons.
+- [How spreads, slippage and connectivity affect trade execution](https://www.surferfx.com/en/research/execution-environment/): From spreads and slippage to connectivity, execution conditions affect every trade.
+- [Choosing historical data and compute for quantitative research](https://www.surferfx.com/en/research/data-to-research/): Coverage, quality and licensing matter as much as compute specifications for reproducible research.
+- [Stock backtesting: comparing prices across a split](https://www.surferfx.com/en/research/stock-price-adjustments/): A stock split changes the share price and the number of shares. A worked two-for-one example shows how to check raw closes, adjustment factors and backtest signals.
+- [Futures backtesting: reading prices and P&L across a contract roll](https://www.surferfx.com/en/research/futures-contract-roll/): A continuous futures chart can jump when it switches delivery months. Two example quotes separate the calendar spread from position P&L and execution costs in a gold futures backtest.
+- [About SurferFX, Surfer Quant and its global network](https://www.surferfx.com/en/about/): Learn about Surfer Quant’s research approach and its institutional and team network in Singapore, New Zealand, Dubai, Malaysia and China.
+- [SurferFX brand and strategy FAQ](https://www.surferfx.com/en/faq/): Find sourced answers about SurferFX, Surfer EA, GoldHunter and GoldArmor AI, with strategy comparisons and dates for historical account snapshots.

@@ -1,0 +1,301 @@
+{
+  "pages": {
+    "/zh/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/strategies/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/strategies/goldarmor/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/strategies/surfer/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/strategies/goldhunter/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/strategies/goldcheetah/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/strategies/goldowl/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/services/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/services/research/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "description": "GoldArmor AI 从市场观察到策略设计，围绕黄金与多资产市场探索规则化执行、AI 辅助分析与风险管理，并公开研究方法与记录口径。"
+    },
+    "/zh/services/markets/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/services/signals/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "description": "FD-Signal 围绕交易信号的研究、评估与专业展示，连接信号供应方、专业交易者与机构客户，并说明评估信号时要关注的样本区间与交易成本。"
+    },
+    "/zh/services/infrastructure/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/performance/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/research/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/research/goldarmor-cpi-rate-expectations/": {
+      "lastModified": "2026-11-11T00:00:00+08:00",
+      "published": "2026-11-11T00:00:00+08:00"
+    },
+    "/zh/research/goldarmor-gold-before-cpi/": {
+      "lastModified": "2026-11-08T00:00:00+08:00",
+      "published": "2026-11-08T00:00:00+08:00"
+    },
+    "/zh/research/goldarmor-friday-volatility/": {
+      "lastModified": "2026-10-31T00:00:00+08:00",
+      "published": "2026-10-31T00:00:00+08:00"
+    },
+    "/zh/research/goldarmor-risk-controls/": {
+      "lastModified": "2026-10-24T00:00:00+08:00",
+      "published": "2026-10-24T00:00:00+08:00"
+    },
+    "/zh/research/goldarmor-cpi-volatility/": {
+      "lastModified": "2026-10-18T00:00:00+08:00",
+      "published": "2026-10-18T00:00:00+08:00"
+    },
+    "/zh/research/goldarmor-account-review/": {
+      "lastModified": "2026-09-26T00:00:00+08:00",
+      "published": "2026-09-26T00:00:00+08:00"
+    },
+    "/zh/research/goldarmor-gold-trading-discipline/": {
+      "lastModified": "2026-09-26T00:00:00+08:00",
+      "published": "2026-09-26T00:00:00+08:00"
+    },
+    "/zh/research/goldarmor-brand-change/": {
+      "lastModified": "2026-09-05T00:00:00+08:00",
+      "published": "2026-09-05T00:00:00+08:00"
+    },
+    "/zh/research/what-is-an-ea/": {
+      "lastModified": "2026-11-11T23:27:17+08:00",
+      "published": "2026-11-11T00:00:00+08:00"
+    },
+    "/zh/research/read-a-strategy/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "description": "评估量化策略时，先弄清它在什么条件下开仓与退出，再看它在哪些市场结构中容易失效，最后才比较收益、回撤与执行成本，本文给出一套阅读顺序。",
+      "published": "2026-10-29T00:00:00+08:00"
+    },
+    "/zh/research/records-and-drawdown/": {
+      "lastModified": "2026-11-11T23:27:17+08:00",
+      "published": "2026-10-29T00:00:00+08:00"
+    },
+    "/zh/research/execution-environment/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "description": "点差、滑点与网络延迟决定了回测与实盘之间的差距。本文说明成交质量如何影响每笔交易的实际成本，以及判断执行环境时需要核对的几个要点。",
+      "published": "2026-10-29T00:00:00+08:00"
+    },
+    "/zh/research/data-to-research/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "description": "选择历史数据时，需要确认覆盖范围、复权与换月口径；算力规模则决定研究迭代速度。本文说明怎样为量化研究与回测准备可复现的数据。",
+      "published": "2026-10-29T00:00:00+08:00"
+    },
+    "/zh/research/stock-price-adjustments/": {
+      "lastModified": "2026-11-11T23:27:17+08:00",
+      "published": "2026-11-11T00:00:00+08:00"
+    },
+    "/zh/research/futures-contract-roll/": {
+      "lastModified": "2026-11-11T23:27:17+08:00",
+      "published": "2026-11-11T00:00:00+08:00"
+    },
+    "/zh/about/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "description": "冲浪者AI量化（SurferFX）以量化技术连接新加坡、新西兰、迪拜、马来西亚与中国的团队，开展黄金与外汇的策略研究、数据与算力服务。"
+    },
+    "/zh/faq/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/contact/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/zh/legal/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/en/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "SurferFX (Surfer Quant) | Gold & Forex Quant Research",
+      "description": "Explore SurferFX quantitative research: GoldArmor gold breakout rules, the Surfer forex EA, historical drawdowns and the data and compute behind them."
+    },
+    "/en/strategies/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/en/strategies/goldarmor/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "GoldArmor: XAUUSD gold EA breakout logic | Surfer Quant"
+    },
+    "/en/strategies/surfer/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "Surfer forex EA: multi-pair trading strategy | Surfer Quant",
+      "description": "Surfer EA trades four USD pairs as one portfolio: profits trail in sustained moves, positions lock in extreme trends. Combined USD exposure drives risk."
+    },
+    "/en/strategies/goldhunter/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "GoldHunter gold swing breakout strategy | Surfer Quant",
+      "description": "GoldHunter, the historical gold breakout EA: short-cycle XAUUSD breakouts, staged entries as momentum builds, and exposure adjusted as volatility changes."
+    },
+    "/en/strategies/goldcheetah/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/en/strategies/goldowl/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/en/services/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/en/services/research/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "GoldArmor AI strategy research | Surfer Quant"
+    },
+    "/en/services/markets/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "Equity, futures, gold and forex markets | Surfer Quant",
+      "description": "Explore equities, futures, gold, forex and digital assets with VIS Markets. When comparing prices, check trading hours, quote units, splits and rolls."
+    },
+    "/en/services/signals/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "FD-Signal: trading signal research | Surfer Quant"
+    },
+    "/en/services/infrastructure/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "AI compute and data services | Surfer Quant"
+    },
+    "/en/performance/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "GoldArmor trading records and drawdowns | Surfer Quant"
+    },
+    "/en/research/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "Research insights: gold market and quant guides"
+    },
+    "/en/research/what-is-an-ea/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "What is an Expert Advisor (EA)? Gold and forex guide",
+      "description": "An Expert Advisor (EA) is a MetaTrader program that analyses prices and, with permission, sends orders. Gold and forex examples show signals, fills and records.",
+      "published": "2026-11-11T00:00:00+08:00"
+    },
+    "/en/research/read-a-strategy/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "How to evaluate a trading strategy | Surfer Quant",
+      "description": "Before you look at returns, check how a strategy enters and exits, and which market conditions make it fail. A practical checklist for reading a strategy.",
+      "published": "2026-10-29T00:00:00+08:00"
+    },
+    "/en/research/records-and-drawdown/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "Reading returns, equity and drawdown | Surfer Quant",
+      "description": "A rising curve is only the start. Date range, deposits and withdrawals, and equity data decide whether two trading records can really be compared.",
+      "published": "2026-10-29T00:00:00+08:00"
+    },
+    "/en/research/execution-environment/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "Spreads, slippage and execution quality | Surfer Quant",
+      "description": "Spreads, slippage and connection quality decide how much of a backtest survives live trading. How execution conditions change fills and real cost per trade.",
+      "published": "2026-10-29T00:00:00+08:00"
+    },
+    "/en/research/data-to-research/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "Choosing data and compute for quant research | Surfer Quant",
+      "description": "Coverage, quality and licensing of historical data matter as much as compute specs. How to prepare data for reproducible quantitative research and backtests.",
+      "published": "2026-10-29T00:00:00+08:00"
+    },
+    "/en/research/stock-price-adjustments/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "Stock backtesting: prices across a split | Surfer Quant",
+      "description": "A stock split changes both the share price and the share count. A worked two-for-one example shows how to check raw closes, adjustment factors and backtest signals.",
+      "published": "2026-11-11T00:00:00+08:00"
+    },
+    "/en/research/futures-contract-roll/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "Futures backtesting across a contract roll | Surfer Quant",
+      "description": "A continuous futures chart can jump at a delivery-month switch. Two example quotes separate the calendar spread from position P&L and execution costs.",
+      "published": "2026-11-11T00:00:00+08:00"
+    },
+    "/en/about/": {
+      "lastModified": "2026-11-11T23:30:52+08:00",
+      "title": "About SurferFX and the Surfer Quant network"
+    },
+    "/en/faq/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/en/contact/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    },
+    "/en/legal/": {
+      "lastModified": "2026-11-11T23:26:29+08:00"
+    }
+  },
+  "imageSizes": {
+    "/assets/surferfx-share-vector-v1.png": [
+      1254,
+      1254
+    ],
+    "/assets/goldarmor-archive/e569bb63a32b.webp": [
+      1850,
+      939
+    ],
+    "/assets/goldarmor-archive/0a9a9320cd03.webp": [
+      1850,
+      946
+    ],
+    "/assets/goldarmor-archive/4fbed3ff323c.webp": [
+      1474,
+      1537
+    ],
+    "/assets/goldarmor-archive/f51436d687ac.webp": [
+      1850,
+      977
+    ],
+    "/assets/goldarmor-archive/85c57fe8c928.webp": [
+      1850,
+      1041
+    ],
+    "/assets/goldarmor-archive/e0714e012634.webp": [
+      1850,
+      975
+    ],
+    "/assets/goldarmor-archive/261a00f072aa.webp": [
+      1850,
+      962
+    ],
+    "/assets/goldarmor-archive/6d74656b2a48.webp": [
+      1084,
+      552
+    ],
+    "/assets/research/what-is-an-ea.webp": [
+      1080,
+      720
+    ],
+    "/assets/research/read-a-strategy.webp": [
+      1080,
+      720
+    ],
+    "/assets/research/records-and-drawdown.webp": [
+      1080,
+      720
+    ],
+    "/assets/research/execution-environment.webp": [
+      1080,
+      720
+    ],
+    "/assets/research/data-to-research.webp": [
+      1080,
+      720
+    ],
+    "/assets/research/stock-price-adjustments.webp": [
+      1080,
+      720
+    ],
+    "/assets/research/futures-contract-roll.webp": [
+      1080,
+      720
+    ]
+  }
+}

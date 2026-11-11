@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SurferFX 网站视觉识别规范</title>
+<link rel="stylesheet" href="../dist/assets/style.css">
+<style>
+body{background:var(--paper)}main{max-width:1060px;margin:auto;padding:clamp(24px,6vw,72px)}
+header{display:flex;align-items:center;gap:20px;border-bottom:1px solid var(--line);padding-bottom:22px}
+header img{width:108px}header span{color:var(--brand);font-weight:600}
+h1{font-size:var(--display);margin:42px 0 14px}h2{font-size:var(--heading);margin-bottom:18px}
+h3{font-size:1.05rem;margin:0 0 8px}main>section{padding:36px 0;border-bottom:1px solid var(--line)}
+p{max-width:65ch;color:var(--muted)}.pair,.examples,.palette{display:grid;gap:14px}
+.pair,.examples{grid-template-columns:repeat(2,minmax(0,1fr))}.palette{grid-template-columns:repeat(3,minmax(0,1fr))}
+.sample,.unit{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.sample b{display:block;margin-bottom:5px}.chip{height:38px;border-radius:3px;margin-bottom:12px;border:1px solid #0001}
+.mark{background:#fff;border:1px solid var(--line);padding:22px;border-radius:var(--radius)}
+.mark.dark{background:var(--navy)}.mark img{width:174px;height:88px;object-fit:contain}
+.mark figcaption{margin-top:16px;font-size:.85rem;color:var(--muted)}.dark figcaption{color:var(--on-dark-muted)}
+code{font: .86rem var(--mono)}.line{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:14px 0;border-top:1px solid var(--line)}
+.example-dark{background:var(--navy)}.example-dark h3,.example-dark p{color:var(--on-dark)}.unit .button{margin-top:16px}
+@media(max-width:650px){.pair,.examples{grid-template-columns:1fr}.palette{grid-template-columns:repeat(2,minmax(0,1fr))}.line{grid-template-columns:1fr;gap:5px}}
+@media print{main{padding:0}.sample,.mark,.unit,.line{break-inside:avoid}*{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+</style></head>
+<body><main><header><img src="../dist/assets/surferfx-logo-vector-v1.svg" alt="SurferFx.com"><span>冲浪者量化</span></header>
+<h1>网站视觉识别规范</h1><p>适用于 SurferFX 中英文官网。访客从认识品牌、比较策略到发起咨询，始终可以通过相同的颜色与组件识别下一步操作。</p>
+<section><h2>标志与留白</h2><div class="pair">
+<figure class="mark"><img src="../dist/assets/surferfx-logo-vector-v1.svg" alt="浅底标准标志"><figcaption>白色页头使用原版深绿字标，保留 .com 与红色 K 线。中文品牌名在图形右侧水平居中。</figcaption></figure>
+<figure class="mark dark"><img src="../dist/assets/surferfx-footer-v1.png" alt="深底透明标志"><figcaption>深蓝页脚使用 600 × 300 透明 PNG，显示宽度 200 px。浅色字标、弧线和三根 K 线作为整体缩放。</figcaption></figure>
+</div><p style="margin-top:18px">页头图框宽 100–160 px，按屏幕宽度调整。图框外为文字留出 6–16 px；背景复杂时使用纯色承载区。浏览器标签页使用三根 K 线简标。</p></section>
+<section><h2>品牌色与用途</h2><div class="palette">
+<div class="sample"><div class="chip" style="background:var(--brand)"></div><b>品牌深绿</b><code>#07503D</code><p>浅底主按钮、链接、导航选中态。</p></div>
+<div class="sample"><div class="chip" style="background:var(--navy)"></div><b>深海蓝</b><code>#0B202B</code><p>首页首屏、全球网络、技术说明区和页脚。</p></div>
+<div class="sample"><div class="chip" style="background:var(--mint)"></div><b>薄荷绿</b><code>#80DBB4</code><p>深底主按钮、关键字、图形节点。</p></div>
+<div class="sample"><div class="chip" style="background:var(--mist)"></div><b>浅雾绿</b><code>#E9F2ED</code><p>内页导语、策略侧栏和咨询引导区。</p></div>
+<div class="sample"><div class="chip" style="background:var(--paper)"></div><b>纸白</b><code>#F8FAF8</code><p>正文底色。卡片与输入框使用纯白。</p></div>
+<div class="sample"><div class="chip" style="background:#ff8184"></div><b>珊瑚红</b><code>#FF8184</code><p>深底版品牌 K 线。浅底原标保留原红。</p></div>
+</div></section>
+<section><h2>字体与阅读层级</h2><div class="line"><b>标题</b><p>内页主标题 32–52 px，章节标题约 26–38 px。首页保留两行大标题；中英文分别控制换行。</p></div>
+<div class="line"><b>正文与说明</b><p>研究和策略正文 16 px、1.9 倍行高，行宽上限 72ch。卡片摘要约 15 px；元信息约 12–13 px。正文墨色 #182F32，次要文字 #526760。</p></div>
+<div class="line"><b>字体与数字</b><p>西文优先 Helvetica Neue、Arial，中文优先苹方、微软雅黑。栏目编号用系统等宽字体，记录数据使用等宽数字；每个指标同时提供文字标签。</p></div></section>
+<section><h2>组件与交互</h2><div class="examples">
+<div class="unit"><h3>浅底操作</h3><p>深绿实心按钮用于咨询、提交和继续。一般阅读入口使用深绿文字链接。</p><a class="button" href="https://www.surferfx.com/zh/contact/">与我们交流 →</a></div>
+<div class="unit example-dark"><h3>深底操作</h3><p>薄荷绿强调首要操作。在同一区域，次要操作使用描边。</p><a class="button accent" href="https://www.surferfx.com/zh/strategies/">探索量化策略 →</a></div></div>
+<div class="line"><b>卡片与表单</b><p>统一 6 px 圆角、细边框和 20–32 px 面板内边距。策略卡自上而下显示类别、名称、摘要、来源与入口。表单标签置于字段上方，手机输入字号 16 px。</p></div>
+<div class="line"><b>键盘与触控</b><p>键盘焦点显示外圈，深底用薄荷绿。筛选选中后同时改变填充与文字色。主要操作高度至少 44 px，表单字段至少 46 px。</p></div></section>
+<section><h2>页面与图形</h2><div class="line"><b>首页与关于</b><p>用深海蓝承载线框海浪与全球网络。线条从青绿过渡至浅薄荷，关键节点用亮色；地图配有文字地区列表。</p></div>
+<div class="line"><b>策略与业务</b><p>先用浅雾绿导语建立上下文，再进入卡片或分栏正文。咨询面板以深绿顶边定位入口；手机端按阅读顺序单列排列。</p></div>
+<div class="line"><b>研究与问答</b><p>每篇研究指南使用独立的主题配图，首页、文章列表与详情页沿用同一封面。用于解释回撤的曲线标注为教学示例。文章以标题、正文、来源的顺序排版，保留可操作的来源链接。</p></div>
+<div class="line"><b>联系与页脚</b><p>表单与联系二维码分区，二维码置于白底。浅绿咨询带衔接深蓝页脚。手机页脚保留探索、平台、联系和法律入口。</p></div>
+<div class="line"><b>响应式网格</b><p>容器最宽 1240 px。布局在 1100、850、620 px 逐步收拢；手机两侧留白 20 px。大区块垂直间距 56–96 px。</p></div></section>
+</main></body></html>

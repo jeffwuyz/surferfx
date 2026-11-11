@@ -1,0 +1,74 @@
+[
+  {
+    "id": "goldarmor-cpi-rate-expectations",
+    "file": "cpi-rate-expectations.html",
+    "title": "美国CPI超预期！美联储12月加息概率从0%升至13.6%",
+    "en": "US inflation and December rate expectations",
+    "date": "2026-11-11",
+    "description": "黄金甲团队复盘美国 CPI 公布后黄金价格与美元的变化，区分加息 25 与 50 个基点的预期，并解释如何观察每盎司 4000 美元关口。",
+    "cover": "/assets/goldarmor-archive/e569bb63a32b.webp"
+  },
+  {
+    "id": "goldarmor-gold-before-cpi",
+    "file": "gold-before-cpi.html",
+    "title": "CPI来袭，黄金恐下探4000美元，黄金甲策略如何应对？",
+    "en": "Gold ahead of the US CPI release",
+    "date": "2026-11-08",
+    "description": "黄金甲策略在美国 CPI 公布前评估黄金波动和交易风险，原文记录 4000 美元关口的两种情形及当周暂停参与数据行情的安排。",
+    "cover": "/assets/goldarmor-archive/0a9a9320cd03.webp"
+  },
+  {
+    "id": "goldarmor-friday-volatility",
+    "file": "friday-volatility.html",
+    "title": "黑色星期五，黄金甲大战凶悍行情",
+    "en": "GoldArmor during a volatile Friday session",
+    "date": "2026-10-31",
+    "description": "结合周五黄金行情中的交易截图，回顾黄金甲策略的持仓、止损和执行，并对照该期账户的月度表现。",
+    "cover": "/assets/goldarmor-archive/4fbed3ff323c.webp"
+  },
+  {
+    "id": "goldarmor-risk-controls",
+    "file": "risk-controls.html",
+    "title": "黄金甲的风控是怎样确保万无一失的？",
+    "en": "How GoldArmor describes its risk controls",
+    "date": "2026-10-24",
+    "description": "从仓位调整、动态止损和异常行情处理三个环节，阅读黄金甲AI团队对黄金 EA 风控的当期说明。",
+    "cover": "/assets/goldarmor-archive/f51436d687ac.webp"
+  },
+  {
+    "id": "goldarmor-cpi-volatility",
+    "file": "cpi-volatility.html",
+    "title": "黄金甲大战CPI剧烈行情",
+    "en": "GoldArmor trading through CPI volatility",
+    "date": "2026-10-18",
+    "description": "回顾黄金甲策略在 CPI 公布时的执行过程，并对照原文记录的黄金交易统计与当期账户图表。",
+    "cover": "/assets/goldarmor-archive/85c57fe8c928.webp"
+  },
+  {
+    "id": "goldarmor-account-review",
+    "file": "account-review.html",
+    "title": "一月零八天，黄金甲翻仓账户观摩",
+    "en": "An account review after one month and eight days",
+    "date": "2026-09-26",
+    "description": "以 8 月 17 日至 9 月 25 日的黄金甲交易记录为起点，结合入金、出金与已实现利润核对账户余额。",
+    "cover": "/assets/goldarmor-archive/e0714e012634.webp"
+  },
+  {
+    "id": "goldarmor-gold-trading-discipline",
+    "file": "gold-trading-discipline.html",
+    "title": "黄金甲专攻黄金，把握上蹿下跳进退自有章法",
+    "en": "Trading discipline during gold price swings",
+    "date": "2026-09-26",
+    "description": "对比 9 月 14 日至 18 日两个黄金甲观察账户的已平仓利润、交易笔数、胜率和盈利因子。",
+    "cover": "/assets/goldarmor-archive/261a00f072aa.webp"
+  },
+  {
+    "id": "goldarmor-brand-change",
+    "file": "brand-change.html",
+    "title": "本周增长11703USD，黄金猎人更名黄金甲量化",
+    "en": "GoldHunter becomes GoldArmor: the weekly account review",
+    "date": "2026-09-05",
+    "description": "黄金猎人更名黄金甲量化的当期记录，说明品牌名称沿革，并逐项回顾当周两次止损、账户增长与回撤。",
+    "cover": "/assets/goldarmor-archive/6d74656b2a48.webp"
+  }
+]
