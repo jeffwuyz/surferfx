@@ -72,6 +72,12 @@ function layout(route, title, description, body) {
   const previewImage = edition?.cover || (article ? researchCover(child) : shareAsset);
   const dimensions = imageSizes[previewImage];
   const imageSizeTags = dimensions ? `<meta property="og:image:width" content="${dimensions[0]}"><meta property="og:image:height" content="${dimensions[1]}">` : '';
+  const previewAlt = edition
+    ? (lang === 'zh' ? edition.title : edition.en ?? edition.title)
+    : article
+      ? (articles.find(a => a.id === child)?.imageAlt ?? title)
+      : tr(['冲浪者量化（Surfer Quant）品牌标志', 'SurferFX (Surfer Quant) brand mark']);
+  const imageAltTags = `<meta property="og:image:alt" content="${esc(tr(previewAlt))}"><meta name="twitter:image:alt" content="${esc(tr(previewAlt))}">`;
   if (child) crumbs.push({name: tr(sectionNames[section]), item: origin + url(section)});
   if (route) crumbs.push({name: title, item: canonical});
 
@@ -84,10 +90,10 @@ function layout(route, title, description, body) {
     inLanguage: locale, isPartOf: { '@id': siteId }
   };
   const graph = [page];
-  if (!route || article || route === 'about' || route === 'faq') {
-    graph.push({ '@type': 'Organization', '@id': organizationId, name: 'Surfer Quant',
-      alternateName: ['冲浪者', '冲浪者量化', '冲浪者AI量化', 'SurferFX'], url: origin + '/', logo: origin + shareAsset });
-  }
+  // Emit the organization node on every page so the entity stays consistent
+  // site-wide (publisher references always resolve on the same page).
+  graph.push({ '@type': 'Organization', '@id': organizationId, name: 'Surfer Quant',
+    alternateName: ['冲浪者', '冲浪者量化', '冲浪者AI量化', 'SurferFX'], url: origin + '/', logo: origin + shareAsset });
   if (!route) graph.push({ '@type': 'WebSite', '@id': siteId, name: 'SurferFX',
     alternateName: ['冲浪者量化', 'Surfer Quant'], url: origin + '/', inLanguage: ['zh-CN','en'],
     publisher: { '@id': organizationId } });
@@ -136,7 +142,7 @@ ${!route && lang === 'zh' ? '<meta name="google-site-verification" content="KiG2
 ${alternatives.map(([code, prefix]) => `<link rel="alternate" hreflang="${code}" href="${origin}/${prefix}/${suffix}">`).join('\n')}
 <meta property="og:title" content="${esc(fullTitle)}"><meta property="og:description" content="${esc(summary)}">
 <meta property="og:url" content="${canonical}"><meta property="og:type" content="${article ? 'article' : 'website'}">
-<meta property="og:site_name" content="SurferFX"><meta property="og:image" content="${origin}${previewImage}">${article ? imageSizeTags : ''}<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(fullTitle)}"><meta name="twitter:description" content="${esc(summary)}"><meta name="twitter:image" content="${origin}${previewImage}">${article ? '' : imageSizeTags}<meta property="og:locale" content="${tr(['zh_CN','en_US'])}"><meta property="og:locale:alternate" content="${tr(['en_US','zh_CN'])}">
+<meta property="og:site_name" content="SurferFX"><meta property="og:image" content="${origin}${previewImage}">${article ? imageSizeTags : ''}<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(fullTitle)}"><meta name="twitter:description" content="${esc(summary)}"><meta name="twitter:image" content="${origin}${previewImage}">${imageAltTags}${article ? '' : imageSizeTags}<meta property="og:locale" content="${tr(['zh_CN','en_US'])}"><meta property="og:locale:alternate" content="${tr(['en_US','zh_CN'])}">
 <script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org', '@graph': graph}).replace(/</g, '\\u003c')}</script>
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"><link rel="stylesheet" href="/assets/style.css"><script src="/assets/app.js" defer></script></head>
 <body>${header(route)}<main id="main">${breadcrumb}${body}${furtherReading(route)}</main>${footer()}<div class="toast" role="status" aria-live="polite"></div></body></html>`;
@@ -317,9 +323,14 @@ for (const language of ['zh','en']) {
 fs.copyFileSync('src/site-search.js',path.join(root,'assets/site-search.js'));
 fs.writeFileSync(path.join(root,'index.html'),'<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=/zh/"><meta name="robots" content="index,follow,max-image-preview:large"><title>冲浪者量化 · Surfer Quant</title><link rel="canonical" href="https://www.surferfx.com/zh/"></head><body><a href="/zh/">进入冲浪者量化</a> · <a href="/en/">Surfer Quant in English</a></body></html>');
 fs.writeFileSync(path.join(root,'404.html'),'<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/assets/style.css"><meta name="robots" content="noindex"><title>页面未找到 · Surfer Quant</title></head><body><main class="page-intro"><div class="wrap"><div class="eyebrow">404 / SURFER QUANT</div><h1>换个方向，继续探索。</h1><p>页面不存在或已移动。The page was not found.</p><a class="button" href="/zh/">返回首页 →</a></div></main></body></html>');
-fs.writeFileSync(path.join(root,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+routes.map(u => {
-  const lastModified = pageMetadata[new URL(u).pathname]?.lastModified;
-  return '<url><loc>' + u + '</loc>' + (lastModified ? '<lastmod>' + lastModified + '</lastmod>' : '') + '</url>';
+fs.writeFileSync(path.join(root,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+routes.map(u => {
+  const { pathname } = new URL(u);
+  const lastModified = pageMetadata[pathname]?.lastModified;
+  const route = pathname.replace(/^\/(zh|en)\//, '').replace(/\/$/, '');
+  const suffix = route ? route + '/' : '';
+  const codes = archiveByRoute.has(route) ? [['zh-CN','zh'],['x-default','zh']] : [['zh-CN','zh'],['en','en'],['x-default','zh']];
+  const alternates = codes.map(([code, prefix]) => '<xhtml:link rel="alternate" hreflang="' + code + '" href="' + origin + '/' + prefix + '/' + suffix + '"/>').join('');
+  return '<url><loc>' + u + '</loc>' + (lastModified ? '<lastmod>' + lastModified + '</lastmod>' : '') + alternates + '</url>';
 }).join('')+'</urlset>');
 fs.writeFileSync(path.join(root, 'llms.txt'), [
   '# SurferFX', '',

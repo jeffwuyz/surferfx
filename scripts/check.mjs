@@ -5,7 +5,11 @@ import vm from 'node:vm';
 
 const root = path.resolve('dist');
 const origin = 'https://www.surferfx.com';
-const files = fs.readdirSync(root, { recursive: true }).filter(f => f.endsWith('.html'));
+// Normalize to forward slashes: readdirSync returns "\" separators on Windows,
+// which would stop the language/route patterns below from matching at all.
+const files = fs.readdirSync(root, { recursive: true })
+  .filter(f => f.endsWith('.html'))
+  .map(f => f.split(path.sep).join('/'));
 const indexable = new Set();
 const titles = new Set();
 const descriptions = new Set();
@@ -46,10 +50,15 @@ for (const file of files) {
   assert.ok(description && !descriptions.has(description), 'Missing or duplicate description in ' + file);
   titles.add(title);
   descriptions.add(description);
+  const ogImageAlt = /<meta property="og:image:alt" content="([^"]+)">/.exec(html)?.[1];
+  const twitterImageAlt = /<meta name="twitter:image:alt" content="([^"]+)">/.exec(html)?.[1];
+  assert.ok(ogImageAlt, 'Missing og:image:alt in ' + file);
+  assert.equal(twitterImageAlt, ogImageAlt, 'twitter:image:alt must match og:image:alt in ' + file);
 
   const data = JSON.parse(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(html)[1]);
   const graph = data['@graph'];
   assert.ok(graph.some(item => item.url === canonical && item.inLanguage === (language === 'en' ? 'en' : 'zh-CN')), file);
+  assert.ok(graph.some(item => item['@type'] === 'Organization'), 'Missing Organization node in ' + file);
   if (route) {
     const trail = graph.find(item => item['@type'] === 'BreadcrumbList').itemListElement;
     assert.equal(trail.at(-1).item, canonical, file);
@@ -74,6 +83,13 @@ for (const file of files) {
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 const listed = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
 assert.deepEqual(listed.sort(), [...indexable].sort(), 'Sitemap must list each indexable URL exactly once');
+assert.ok(sitemap.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"'), 'Sitemap must declare the xhtml namespace');
+const alternates = [...sitemap.matchAll(/<xhtml:link rel="alternate" hreflang="([^"]+)" href="([^"]+)"\/>/g)].map(m => [m[1], m[2]]);
+assert.ok(alternates.length, 'Sitemap must include hreflang alternates');
+for (const [code, href] of alternates) {
+  assert.ok(['zh-CN', 'en', 'x-default'].includes(code), 'Unexpected sitemap hreflang: ' + code);
+  assert.ok(indexable.has(href), 'Sitemap alternate points at a non-indexable URL: ' + href);
+}
 assert.ok(fs.readFileSync(path.join(root, 'robots.txt'), 'utf8').includes('Sitemap: ' + origin + '/sitemap.xml'));
 const directory = fs.readFileSync(path.join(root, 'llms.txt'), 'utf8');
 const directoryUrls = [...directory.matchAll(/\]\((https:[^)]+)\)/g)].map(m => m[1]);
