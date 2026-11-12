@@ -138,7 +138,7 @@ function layout(route, title, description, body) {
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 ${!route && lang === 'zh' ? '<meta name="google-site-verification" content="KiG2KM9LIL5V2LiCvft2fJZqI_BCSlYSoX049RWC2dQ">' : ''}
 <meta name="robots" content="index,follow,max-image-preview:large"><title>${esc(fullTitle)}</title><meta name="description" content="${esc(summary)}">
-<meta name="theme-color" content="#0b202b"><link rel="canonical" href="${canonical}">
+<meta name="theme-color" content="#0b202b"><meta name="baidu-site-verification" content="codeva-fMUEMr27DC"><link rel="canonical" href="${canonical}">
 ${alternatives.map(([code, prefix]) => `<link rel="alternate" hreflang="${code}" href="${origin}/${prefix}/${suffix}">`).join('\n')}
 <meta property="og:title" content="${esc(fullTitle)}"><meta property="og:description" content="${esc(summary)}">
 <meta property="og:url" content="${canonical}"><meta property="og:type" content="${article ? 'article' : 'website'}">
@@ -321,7 +321,7 @@ for (const language of ['zh','en']) {
   fs.writeFileSync(path.join(root,'assets','search-' + language + '.json'), JSON.stringify(searchEntries[language]));
 }
 fs.copyFileSync('src/site-search.js',path.join(root,'assets/site-search.js'));
-fs.writeFileSync(path.join(root,'index.html'),'<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=/zh/"><meta name="robots" content="index,follow,max-image-preview:large"><title>冲浪者量化 · Surfer Quant</title><link rel="canonical" href="https://www.surferfx.com/zh/"></head><body><a href="/zh/">进入冲浪者量化</a> · <a href="/en/">Surfer Quant in English</a></body></html>');
+fs.writeFileSync(path.join(root,'index.html'),'<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="baidu-site-verification" content="codeva-fMUEMr27DC"><meta http-equiv="refresh" content="0;url=/zh/"><meta name="robots" content="index,follow,max-image-preview:large"><title>冲浪者量化 · Surfer Quant</title><link rel="canonical" href="https://www.surferfx.com/zh/"></head><body><a href="/zh/">进入冲浪者量化</a> · <a href="/en/">Surfer Quant in English</a></body></html>');
 fs.writeFileSync(path.join(root,'404.html'),'<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/assets/style.css"><meta name="robots" content="noindex"><title>页面未找到 · Surfer Quant</title></head><body><main class="page-intro"><div class="wrap"><div class="eyebrow">404 / SURFER QUANT</div><h1>换个方向，继续探索。</h1><p>页面不存在或已移动。The page was not found.</p><a class="button" href="/zh/">返回首页 →</a></div></main></body></html>');
 fs.writeFileSync(path.join(root,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+routes.map(u => {
   const { pathname } = new URL(u);
